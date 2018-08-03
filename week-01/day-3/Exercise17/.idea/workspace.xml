@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efbcc22d-df8a-4563-a5da-4ebe06de73eb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../day-4/Exercise18/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-4/Exercise18/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day-4/Exercise19/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../day-4/Exercise19/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -159,7 +159,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="953" y="0" width="974" height="1047" extended-state="1" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2177243" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
