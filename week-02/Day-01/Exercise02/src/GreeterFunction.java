@@ -10,6 +10,14 @@ public class GreeterFunction {
     public static void main(String[] args){
 
         String al = "Greenfox";
+        String output = greet(al);
+        System.out.println(output);
 
     }
+
+    public static String greet(String input) {
+
+        return "Greetings dear, " + input;
+    }
+
 }
