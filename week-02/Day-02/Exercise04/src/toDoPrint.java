@@ -12,7 +12,7 @@ public class toDoPrint {
         //  - Download games
         //      - Diablo
 
-        todoText = todoText + " - Download games\n" + "\t - Diablo";
+        todoText = "My todo: \n" + todoText + " - Download games\n" + "\t - Diablo";
         System.out.println(todoText);
     }
 }
