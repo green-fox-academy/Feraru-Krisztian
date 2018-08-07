@@ -3,3 +3,6 @@ out
 *.iml
 *.xml
 *.class
+
+# if you have a mac
+.DS_Store
