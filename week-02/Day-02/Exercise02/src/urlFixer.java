@@ -6,8 +6,8 @@ public class urlFixer {
         // Also, the URL is missing a crutial component, find out what it is and insert it too!
         // Try to solve it more than once using different String functions!
 
-
-        System.out.println(url.replace("bots", "odds"));
-        System.out.println(url.replace("//", "://"));
+        url = url.replace("bots", "odds");
+        url = url.replace("//", "://");
+        System.out.println(url);
     }
 }
