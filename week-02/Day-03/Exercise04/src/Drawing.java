@@ -11,15 +11,12 @@ public class Drawing {
         // and draws a line from that point to the center of the canvas.
         // Draw 3 lines with that function. Use loop for that.
 
-        lines(graphics);
-
-    }
-    public static void lines(Graphics graphics) {
-
-        int a = 160;
-        for (int i = 0; i < 3; i++) {
-            graphics.drawLine(i * a,0, 160, 171);
+        for(int j = 0; j < 3; j++) {
+            lines(graphics, j * (WIDTH / 2), 0);
         }
+    }
+    public static void lines(Graphics graphics, int x, int y ) {
+        graphics.drawLine(x, y, WIDTH / 2, HEIGHT / 2);
 
     }
 
