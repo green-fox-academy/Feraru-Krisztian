@@ -6,22 +6,19 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
 public class Drawing {
     public static void mainDraw(Graphics graphics) {
-        
 
-        public static void linePlay(Graphics graphics){
-            int x = 0;
-            int y = 0;
-            int x1 = 0;
-            int y1 = 0;
+        int x = 0;
+        int y = 0;
+        int x1 = 0;
+        int y1 = 0;
 
-            for (int i = 0; i < WIDTH; i = i + 20) {
-                graphics.setColor(new Color(140, 0, 211));
-                graphics.drawLine(i + x, y, WIDTH, i + y1);
-            }
-            for (int j = 0; j < HEIGHT; j = j + 20) {
-                graphics.setColor(Color.green);
-                graphics.drawLine(x, j + y, j + x1, HEIGHT);
-            }
+        for (int i = 0; i < WIDTH; i = i + 20) {
+            graphics.setColor(new Color(140, 0, 211));
+            graphics.drawLine(i + x, y, WIDTH, i + y1);
+        }
+        for (int j = 0; j < HEIGHT; j = j + 20) {
+            graphics.setColor(Color.green);
+            graphics.drawLine(x, j + y,j + x1, HEIGHT);
         }
     }
 
