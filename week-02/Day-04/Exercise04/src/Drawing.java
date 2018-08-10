@@ -22,8 +22,8 @@ public class Drawing {
     }
 
     // Don't touch the code below
-    static int WIDTH = 320;
-    static int HEIGHT = 343;
+    static int WIDTH = 1320;
+    static int HEIGHT = 1343;
 
     public static void main(String[] args) {
         JFrame jFrame = new JFrame("Drawing");
