@@ -20,7 +20,7 @@ public class Drawing {
        graphics.drawLine(x + size, y, x + size/2, y - size);
        graphics.drawLine(x + size/2, y - size, x, y);
     }
-    
+
     public static void rowOfTriangle(Graphics graphics,int n,  int x, int y, int size) {
         for (int i = 0; i < n; i++) {
             drawTriangle(graphics, x, y, size);
