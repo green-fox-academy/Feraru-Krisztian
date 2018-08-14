@@ -9,6 +9,7 @@ public class Drawing {
 
         star(graphics);
     }
+
     public static void star(Graphics graphics) {
         int x = 0;
         int y = 0;
@@ -22,7 +23,7 @@ public class Drawing {
         for (int j = 0; j < HEIGHT/2; j = j + 10) {
             graphics.drawLine(WIDTH/2, y + j,WIDTH/2 + j, HEIGHT/2);
         }
-        for (int k = 0; k < HEIGHT/2 ; k = k + 10) {
+        for (int k = 0; k < WIDTH/2 ; k = k + 10) {
             graphics.drawLine(WIDTH/2, HEIGHT/2 + k, WIDTH - k, HEIGHT/2);
         }
         for (int l = 0; l < HEIGHT/2 ; l = l + 10) {
