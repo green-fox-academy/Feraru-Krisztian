@@ -1,4 +1,4 @@
-public class Tree extends Plants{
+public class Tree extends Plants {
 
     public Tree(String color) {
         super(color);
@@ -11,7 +11,7 @@ public class Tree extends Plants{
 
     @Override
     public boolean needsWater() {
-        if(getWaterAmount() < 10) {
+        if (getWaterAmount() < 10) {
             return true;
         }
         return false;

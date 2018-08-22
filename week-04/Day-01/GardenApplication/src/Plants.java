@@ -21,7 +21,7 @@ public class Plants {
     }
 
     public boolean needsWater() {
-        if(this.waterAmount < 0) {
+        if (this.waterAmount < 0) {
             return true;
         }
         return false;

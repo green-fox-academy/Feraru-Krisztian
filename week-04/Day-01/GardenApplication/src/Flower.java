@@ -1,4 +1,4 @@
-public class Flower extends Plants{
+public class Flower extends Plants {
 
     public Flower(String color) {
         super(color);
@@ -11,7 +11,7 @@ public class Flower extends Plants{
 
     @Override
     public boolean needsWater() {
-        if(getWaterAmount() < 5) {
+        if (getWaterAmount() < 5) {
             return true;
         }
         return false;
