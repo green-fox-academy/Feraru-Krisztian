@@ -3,7 +3,7 @@ import java.awt.*;
 
 public class Main extends JComponent {
 
-    private static int MAX_DEPTH = 0;
+    private static int MAX_DEPTH = 10;
 
     @Override
     protected void paintComponent(Graphics g) {
