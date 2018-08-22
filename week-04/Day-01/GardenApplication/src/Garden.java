@@ -2,57 +2,68 @@ import java.util.ArrayList;
 
 public class Garden {
 
-    private ArrayList<Flower> flowers;
-    private ArrayList<Tree> trees;
+    private ArrayList<Plants> plants;
 
-    public ArrayList<Flower> getFlowers() {
-        return flowers;
-    }
-
-    public ArrayList<Tree> getTrees() {
-        return trees;
+    public ArrayList<Plants> getPlants() {
+        return plants;
     }
 
     public Garden() {
-        this.flowers = new ArrayList<Flower>();
-        this.trees = new ArrayList<Tree>();
+        this.plants = new ArrayList<Plants>();
     }
 
     public void addFlower(Flower flower) {
-        flowers.add(flower);
+        plants.add(flower);
     }
 
     public void addTree(Tree tree) {
-        trees.add(tree);
+        plants.add(tree);
     }
 
     public void printGarden() {
-        for (int i = 0; i < flowers.size(); i++) {
-            System.out.println(flowers.get(i));
-        }
-        for (int i = 0; i < trees.size(); i++) {
-            System.out.println(trees.get(i));
+        for (int i = 0; i < plants.size(); i++) {
+            System.out.println(plants.get(i));
         }
 
+    }
+
+    public boolean isFlower(int index) {
+        if (plants.get(index) instanceof Flower){
+            return true;
+        }
+        return false;
     }
 
     public void plantsStatus() {
-        for (int i = 0; i < flowers.size(); i++) {
-            if (flowers.get(i).needsWater()) {
-                System.out.println("The " + flowers.get(i).getColor() + " flower needs water!");
-            } else {
-                System.out.println("The " + flowers.get(i).getColor() + " flower doesn't needs water!");
+        for (int i = 0; i < plants.size(); i++) {
+            if (plants.get(i).needsWater() && isFlower(i)) {
+                System.out.println("The " + plants.get(i).getColor() + " flower needs water!");
+            } else if(isFlower(i)){
+                System.out.println("The " + plants.get(i).getColor() + " flower doesn't needs water!");
             }
-        }for (int i = 0; i < trees.size(); i++) {
-            if (trees.get(i).needsWater()) {
-                System.out.println("The " + trees.get(i).getColor() + " flower needs water!");
-            } else {
-                System.out.println("The " + trees.get(i).getColor() + " flower doesn't needs water!");
+        }
+        for (int i = 0; i < plants.size(); i++) {
+            if (plants.get(i).needsWater() && isFlower(i) != true) {
+                System.out.println("The " + plants.get(i).getColor() + " tree needs water!");
+            } else if(isFlower(i) != true) {
+                System.out.println("The " + plants.get(i).getColor() + " tree doesn't needs water!");
             }
         }
     }
 
-    public void watering() {
-
+    public void watering(int amountOfWatering) {
+        int waterPerPlant = 0;
+        int counter = 0;
+        for (Plants plant : plants) {
+            if(plant.needsWater()) {
+                counter++;
+            }
+        }
+        waterPerPlant = amountOfWatering / counter;
+        for (Plants plant : plants) {
+            if(plant.needsWater()) {
+                plant.setWaterAmount(waterPerPlant);
+            }
+        }
     }
 }

@@ -14,6 +14,13 @@ public class Main {
         myGarden.addTree(orangeTree);
 
         myGarden.printGarden();
+        myGarden.getPlants();
+        myGarden.plantsStatus();
+        System.out.println();
+        myGarden.watering(40);
+        myGarden.plantsStatus();
+        System.out.println();
+        myGarden.watering(70);
         myGarden.plantsStatus();
 
     }

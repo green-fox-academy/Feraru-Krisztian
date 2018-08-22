@@ -1,12 +1,17 @@
 public class Plants {
     private String color;
-    private int waterAmount;
+    private double waterAmount;
 
     public String getColor() {
         return this.color;
     }
 
-    public int getWaterAmount() {
+    public void setWaterAmount(double waterAmount) {
+        this.waterAmount = waterAmount;
+
+    }
+
+    public double getWaterAmount() {
         return this.waterAmount;
     }
 
@@ -21,4 +26,6 @@ public class Plants {
         }
         return false;
     }
+
+
 }

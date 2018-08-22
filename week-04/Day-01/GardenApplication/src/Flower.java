@@ -1,6 +1,5 @@
 public class Flower extends Plants{
 
-
     public Flower(String color) {
         super(color);
     }
@@ -18,4 +17,8 @@ public class Flower extends Plants{
         return false;
     }
 
+    @Override
+    public void setWaterAmount(double waterAmount) {
+        super.setWaterAmount(waterAmount * 0.75);
+    }
 }

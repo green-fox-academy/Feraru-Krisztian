@@ -16,4 +16,9 @@ public class Tree extends Plants{
         }
         return false;
     }
+
+    @Override
+    public void setWaterAmount(double waterAmount) {
+        super.setWaterAmount(waterAmount * 0.4);
+    }
 }
