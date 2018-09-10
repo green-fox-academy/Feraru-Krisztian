@@ -3,11 +3,10 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        ArrayList<Integer> myList = new ArrayList<>(Arrays.asList(1, 3, -2, -4, -7, -3, -8, 12, 19, 6, 9, 10, 14));
+        ArrayList<Integer> myList = new ArrayList<>(Arrays.asList(3, 9, 2, 8, 6, 5));
 
         myList.stream()
-                .filter(x -> x > 0)
-                .mapToInt(x -> x * x)
+                .filter(x -> x * x > 20)
                 .forEach(System.out::println);
     }
 }
