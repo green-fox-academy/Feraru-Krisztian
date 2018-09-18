@@ -11,7 +11,7 @@ public class bankAccountController {
     @RequestMapping("/show")
     public String count(Model model) {
         BankAccount simba = new BankAccount("Simba", 2000, "lion");
-        model.addAttribute("newBankAccount", simba);
+        model.addAttribute("bankAccount", simba);
         return "show";
     }
 }

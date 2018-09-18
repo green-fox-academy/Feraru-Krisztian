@@ -2,13 +2,18 @@ package com.greenfoxacademy.bankofsimba.models;
 
 public class BankAccount {
     private String name;
-    private long balance;
+    private float balance;
     private String animalType;
+    private String currency = "€";
 
-    public BankAccount(String name, long balance, String animalType) {
+    public BankAccount(String name, float balance, String animalType) {
         this.name = name;
         this.balance = balance;
         this.animalType = animalType;
+    }
+
+    public String getCurrency() {
+        return currency;
     }
 
     public String getName() {
@@ -19,11 +24,11 @@ public class BankAccount {
         this.name = name;
     }
 
-    public long getBalance() {
+    public float getBalance() {
         return balance;
     }
 
-    public void setBalance(long balance) {
+    public void setBalance(float balance) {
         this.balance = balance;
     }
 

@@ -6,6 +6,8 @@
     <meta charset="utf-8" />
 </head>
 <body>
-    <h1 th th:text="|${newBankAccount.name} ${newBankAccount.balance} ${newBankAccount.animalType}|"></h1>
+    <h1 style="color:blue">BANK OF SIMBA</h1>
+        <p style="color:#068b0d">Welcome to our bank!</p>
+    <h2 th th:text="|${bankAccount.name} ${#numbers.formatDecimal(bankAccount.balance, 1, 2)} ${bankAccount.currency} ${bankAccount.animalType}|"></h2>
 </body>
 </html>
