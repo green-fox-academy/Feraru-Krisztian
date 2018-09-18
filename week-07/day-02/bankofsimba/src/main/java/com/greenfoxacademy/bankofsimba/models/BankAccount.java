@@ -16,6 +16,10 @@ public class BankAccount {
         return currency;
     }
 
+    public void setCurrency(String currency) {
+        this.currency = currency;
+    }
+
     public String getName() {
         return name;
     }

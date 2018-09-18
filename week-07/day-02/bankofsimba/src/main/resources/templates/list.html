@@ -11,6 +11,7 @@
     <table rules="all">
         <thead>
         <tr>
+            <th>Index</th>
             <th>Name</th>
             <th>Balance</th>
             <th>Animal</th>
@@ -19,6 +20,7 @@
         <tfoot>
         <th:block th:each="element : ${accountList}">
             <tr>
+                <td th:text="${elementStat.index}"></td>
                 <td th:text="${element.name}"></td>
                 <td th:text="|${#numbers.formatDecimal(element.balance, 1, 2)} ${element.currency}|"></td>
                 <td th:text="${element.animalType}"></td>
