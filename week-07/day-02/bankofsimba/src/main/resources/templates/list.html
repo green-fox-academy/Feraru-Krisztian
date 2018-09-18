@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>List of accounts</title>
+    <link rel="stylesheet" th:href="@{/style.css}" />
+    <meta charset="utf-8" />
+</head>
+<body>
+<h1 align="center" style="color: yellow">This is the list of bank accounts</h1>
+<ul>
+    <table rules="all">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Balance</th>
+            <th>Animal</th>
+        </tr>
+        </thead>
+        <tfoot>
+        <th:block th:each="element : ${accountList}">
+            <tr>
+                <td th:text="${element.name}"></td>
+                <td th:text="|${#numbers.formatDecimal(element.balance, 1, 2)} ${element.currency}|"></td>
+                <td th:text="${element.animalType}"></td>
+            </tr>
+        </th:block>
+        </tfoot>
+    </table>
+
+</ul>
+</body>
+</html>
