@@ -19,8 +19,14 @@
         </thead>
         <tfoot>
         <th:block th:each="element : ${accountList}">
-            <tr>
-                <td th:text="${elementStat.index}"></td>
+            <tr th:if="${element.isKing()}" class="king">
+                <td th:text="${elementStat.index + 1}"></td>
+                <td th:text="${element.name}"></td>
+                <td th:text="|${#numbers.formatDecimal(element.balance, 1, 2)} ${element.currency}|"></td>
+                <td th:text="${element.animalType}"></td>
+            </tr>
+            <tr th:unless="${element.isKing()}">
+                <td th:text="${elementStat.index + 1}"></td>
                 <td th:text="${element.name}"></td>
                 <td th:text="|${#numbers.formatDecimal(element.balance, 1, 2)} ${element.currency}|"></td>
                 <td th:text="${element.animalType}"></td>

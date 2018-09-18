@@ -10,7 +10,7 @@ public class bankAccountController {
 
     @RequestMapping("/show")
     public String count(Model model) {
-        BankAccount simba = new BankAccount("Simba", 2000, "lion");
+        BankAccount simba = new BankAccount("Simba", 2000, "lion", true);
         model.addAttribute("bankAccount", simba);
         return "show";
     }

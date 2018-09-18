@@ -5,11 +5,17 @@ public class BankAccount {
     private float balance;
     private String animalType;
     private String currency = "€";
+    private boolean isKing;
 
-    public BankAccount(String name, float balance, String animalType) {
+    public BankAccount(String name, float balance, String animalType, boolean isKing) {
         this.name = name;
         this.balance = balance;
         this.animalType = animalType;
+        this.isKing = isKing;
+    }
+
+    public boolean isKing() {
+        return isKing;
     }
 
     public String getCurrency() {
