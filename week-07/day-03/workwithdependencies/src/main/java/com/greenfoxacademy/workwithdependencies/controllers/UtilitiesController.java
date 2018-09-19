@@ -1,5 +1,6 @@
 package com.greenfoxacademy.workwithdependencies.controllers;
 
+import com.greenfoxacademy.workwithdependencies.services.CaesarEncoderDecoder;
 import com.greenfoxacademy.workwithdependencies.services.UtilityService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,9 +11,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class UtilitiesController {
 
     UtilityService utilityService;
+    CaesarEncoderDecoder Caesar;
 
-    public UtilitiesController(UtilityService utilityService) {
+    public UtilitiesController(UtilityService utilityService, CaesarEncoderDecoder Caesar) {
         this.utilityService = utilityService;
+        this.Caesar = Caesar;
     }
 
     @RequestMapping("/useful")
@@ -33,5 +36,16 @@ public class UtilitiesController {
         model.addAttribute("emailvalid", utilityService.validateEmail(email));
         model.addAttribute("email", email);
         return "email";
+    }
+
+    @RequestMapping("/encoding")
+    public String encoding(Model model, @RequestParam("text") String text){
+        model.addAttribute("text", Caesar.caesarEncodeing(text, 1));
+        return "text";
+    }
+    @RequestMapping("/decoding")
+    public String decoding(Model model, @RequestParam("text") String text){
+        model.addAttribute("text", Caesar.caesarDecodeing(text, 1));
+        return "text";
     }
 }
