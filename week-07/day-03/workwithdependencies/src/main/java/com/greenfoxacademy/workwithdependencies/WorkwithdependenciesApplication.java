@@ -11,7 +11,7 @@ public class WorkwithdependenciesApplication implements CommandLineRunner {
     private Printer printer;
     private MyColor myColor;
 
-    public WorkwithdependenciesApplication (Printer printer, MyColor myColor){
+    public WorkwithdependenciesApplication(Printer printer, MyColor myColor) {
         this.printer = printer;
         this.myColor = myColor;
     }
