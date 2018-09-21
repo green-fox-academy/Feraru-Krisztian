@@ -18,7 +18,7 @@ public class ClubService {
 
     public Fox getFoxFromList(String name) {
         for (int i = 0; i < listOfFoxes.size(); i++) {
-            if (listOfFoxes.get(i).getName() == name) {
+            if (listOfFoxes.get(i).getName().equals(name)) {
                 return listOfFoxes.get(i);
             }
         }

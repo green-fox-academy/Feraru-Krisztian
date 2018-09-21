@@ -11,11 +11,13 @@
     </ul>
     <img src="greenfox.jpg">
     <br>
-    <p> This is <span th:text="${fox.name}"></span>. Currently living on <span th:text="${fox.food}"></span> and <span th:text="${fox.drink}"></span>. He knows 2 tricks.</p>
+    <p> This is <span th:text="${fox.name}"></span>. Currently living on <span th:text="${fox.food}"></span> and <span th:text="${fox.drink}"></span>. He knows <span th:text="${fox.listOfTricks.size()}"></span> tricks.</p>
     <h1>Known tricks</h1>
     <ul>
-        <li>write HTML</li>
-        <li>code in Java</li>
+        <li><span th:if="${fox.listOfTricks.size() == 0}">You know no tricks yet. Go and learn some.</span></li>
+        <th:block th:each="trick : ${fox.listOfTricks}">>
+            <li th:text="${trick}"><span th:unless="${fox.listOfTricks.size() == 0}"></span></li>
+        </th:block>
     </ul>
 </body>
 </html>

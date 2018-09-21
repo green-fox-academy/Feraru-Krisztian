@@ -3,7 +3,6 @@ import com.greenfoxacademy.foxclub.models.Fox;
 import com.greenfoxacademy.foxclub.services.ClubService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -17,7 +16,7 @@ public class MainController {
     }
 
     @RequestMapping("/")
-    public String home(Model model,String name) {
+    public String home(Model model,@RequestParam("name") String name) {
         model.addAttribute("info", "/information");
         model.addAttribute("login", "/login");
         Fox fox = clubService.getFoxFromList(name);
@@ -31,19 +30,5 @@ public class MainController {
     @RequestMapping("/information")
     public String info() {
         return "information";
-    }
-
-    @RequestMapping("/login")
-    public String getLogin() {
-        return "login";
-    }
-
-    @PostMapping("/")
-    public String postLogin(@RequestParam("name") String name) {
-//        if (name == "") {
-//            return "redirect:/login";
-//        }
-        clubService.addFoxToList(new Fox(name));
-        return "redirect:/?name=" + name;
     }
 }
