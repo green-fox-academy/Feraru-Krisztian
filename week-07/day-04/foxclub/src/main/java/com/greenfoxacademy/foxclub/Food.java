@@ -4,7 +4,7 @@ public enum Food {
     GYROS("gyros"),
     PIZZA("pizza"),
     CHIPS("chips"),
-    GOULAS("hungarian goulas");
+    GOULASH("hungarian goulash");
 
     private final String value;
 

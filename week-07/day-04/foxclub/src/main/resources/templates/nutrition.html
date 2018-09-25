@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Nutrition Store</title>
+    <link rel="stylesheet" th:href="@{/style.css}"/>
+</head>
+<body>
+    <form method="post" action="redirect:/?name=BUBU">
+        <select>
+            <option value="pizza">PIZZA</option>
+            <option value="gyros">GYROS</option>
+            <option value="chips">CHIPS</option>
+            <option value="hungarian goulash">GOULASH</option>
+        </select>
+        <select>
+            <option value="lemonade">LEMONADE</option>
+            <option value="cola">COLA</option>
+            <option value="beer">BEER</option>
+            <option value="water">WATER</option>
+        </select>
+        <button type="submit" value="ADD">ADD</button><br><br><br><br>
+    </form>
+    <button type="submit" value="GO"><a th:href="'/?name=BUBU'" >Back to home</a></button>
+</body>
+</html>

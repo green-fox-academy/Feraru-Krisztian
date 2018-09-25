@@ -3,20 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
+    <link rel="stylesheet" th:href="@{/style.css}"/>
 </head>
+<body>
 <br>
     <ul>
-        <li><a th:href="${info}">Information</a></li>
-        <li><a th:href="${login}">LogIn</a></li>
+        <button type="submit" value="GO"><a th:href="${info}">Information</a></button>
+        <button type="submit" value="GO"><a th:href="${nutritionStore}">Nutrition Store</a></button>
+        <button type="submit" value="GO"><a th:href="${trickCenter}">Trick Center</a></button>
+        <button type="submit" value="GO"><a th:href="${login}">LogIn</a></button>
     </ul>
-    <img src="greenfox.jpg">
+    <img src="gf.png">
     <br>
-    <p> This is <span th:text="${fox.name}"></span>. Currently living on <span th:text="${fox.food}"></span> and <span th:text="${fox.drink}"></span>. He knows <span th:text="${fox.listOfTricks.size()}"></span> tricks.</p>
+    <p> This is <span th:text="${fox.name}"></span>. Currently living on <span th:text="${fox.food}"></span> and <span th:text="${fox.drink}"></span>. She knows <span th:text="${fox.listOfTricks.size()}"></span> tricks.</p>
     <h1>Known tricks</h1>
     <ul>
-        <li><span th:if="${fox.listOfTricks.size() == 0}">You know no tricks yet. Go and learn some.</span></li>
-        <th:block th:each="trick : ${fox.listOfTricks}">>
-            <li th:text="${trick}"><span th:unless="${fox.listOfTricks.size() == 0}"></span></li>
+        <span th:if="${fox.listOfTricks.size() == 0}">You know no tricks yet. Go and learn some.</span>
+        <th:block th:each="trick : ${fox.listOfTricks}"
+            th:text="${trick}"><span th:unless="${fox.listOfTricks.size() == 0}"></span>
         </th:block>
     </ul>
 </body>

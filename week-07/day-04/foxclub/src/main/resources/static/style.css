@@ -1,0 +1,63 @@
+body {
+    background-color: darkgray;
+    text-align: center;
+    margin: 100px;
+}
+
+ul a {
+    text-decoration: none;
+}
+
+img {
+    align-content: center;
+}
+
+input[type="text"] {
+    background: lawngreen;
+    padding: 15px;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    border-radius: 4px;
+    border: 0px;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.5);
+    with: 150px;
+}
+
+button[type="submit"] {
+    text-decoration: none;
+    background: red;
+    padding: 15px;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    border-radius: 4px;
+    border: 0px;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.5);
+    with: auto;
+}
+
+button {
+    text-decoration: none;
+    background: red;
+    padding: 15px;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    border-radius: 4px;
+    border: 0px;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.5);
+    with: 150px;
+}
+
+select {
+    background: lawngreen;
+    padding: 15px;
+    color: red;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    border-radius: 4px;
+    border: 0px;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.5);
+    with: 150px;
+}

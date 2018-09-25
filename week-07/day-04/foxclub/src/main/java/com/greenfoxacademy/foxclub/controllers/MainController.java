@@ -18,7 +18,10 @@ public class MainController {
     @RequestMapping("/")
     public String home(Model model,@RequestParam("name") String name) {
         model.addAttribute("info", "/information");
+        model.addAttribute("nutritionStore", "/nutritionstore");
+        model.addAttribute("trickCenter", "/trickcenter");
         model.addAttribute("login", "/login");
+        model.addAttribute("name", name);
         Fox fox = clubService.getFoxFromList(name);
         model.addAttribute("fox", fox);
         if (fox == null) {
@@ -30,5 +33,15 @@ public class MainController {
     @RequestMapping("/information")
     public String info() {
         return "information";
+    }
+
+    @RequestMapping("/trickcenter")
+    public String tricks(){
+        return "tricks";
+    }
+
+    @RequestMapping("/nutritionstore")
+    public String store(){
+        return "nutrition";
     }
 }

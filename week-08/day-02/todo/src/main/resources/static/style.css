@@ -1,0 +1,29 @@
+body {
+    background-color: #ffffff;
+}
+
+table {
+    font-family: "Arial";
+    font-size: 22px;
+    font-stretch: condensed;
+    width: 30%;
+    border: black;
+    border-collapse: separate;
+    margin: auto;
+    background: white;
+}
+
+th, td {
+    text-align: left;
+    vertical-align: middle;
+    height: auto;
+    border: 2px solid #999;
+    padding: auto;
+}
+
+th {
+    text-align: center;
+    background: #ffffff;
+    border: 1px solid #ffffff;
+    color: #000000;
+}

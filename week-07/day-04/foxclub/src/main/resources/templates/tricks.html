@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Trick Center</title>
+    <link rel="stylesheet" th:href="@{/style.css}"/>
+
+</head>
+<body>
+    <form method="post" action="redirect:/?name=BUBU">
+        <select>
+            <option value="Write HTML">PROGRAMING</option>
+            <option value="Driving a car">DRIVING</option>
+            <option value="Play with the ball">PLAYING</option>
+            <option value="Coding in Java">LEARNING</option>
+        </select>
+        <button type="submit" value="ADD">ADD</button><br><br><br><br>
+    </form>
+    <button type="submit" value="GO"><a th:href="'/?name=BUBU'">Back to home</a></button>
+</body>
+</html>
