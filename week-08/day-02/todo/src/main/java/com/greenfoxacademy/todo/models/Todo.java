@@ -11,8 +11,8 @@ public class Todo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String toDo;
-    private boolean done = false;
-    private boolean urgent = false;
+    private boolean done;
+    private boolean urgent;
 
     public Todo() {}
 
@@ -20,6 +20,12 @@ public class Todo {
         this.toDo = toDo;
         this.done = done;
         this.urgent = urgent;
+    }
+
+    public Todo(String toDo) {
+        this.toDo = toDo;
+        this.done = false;
+        this.urgent = false;
     }
 
     public long getId() {
@@ -43,7 +49,7 @@ public class Todo {
     }
 
     public void setDone(boolean done) {
-        done = done;
+        this.done = done;
     }
 
     public boolean isUrgent() {
@@ -51,7 +57,7 @@ public class Todo {
     }
 
     public void setUrgent(boolean urgent) {
-        urgent = urgent;
+        this.urgent = urgent;
     }
 
     @Override

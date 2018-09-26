@@ -2,15 +2,13 @@ package com.greenfoxacademy.todo.controllers;
 
 import com.greenfoxacademy.todo.TodoRepository;
 import com.greenfoxacademy.todo.models.Todo;
+import org.springframework.data.util.Streamable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @Controller
 public class TodoController {
@@ -20,12 +18,6 @@ public class TodoController {
     public TodoController(TodoRepository todoRepository) {
         this.todoRepository = todoRepository;
     }
-//    @RequestMapping("/todo")
-//    public String todos(Model model) {
-//        model.addAttribute("todoList", todoRepository.findAll());
-//
-//        return "index";
-//    }
 
     @RequestMapping("/todo/add")
     public String getAddTodo() {
@@ -44,17 +36,21 @@ public class TodoController {
     @RequestMapping("/todo")
     public String isAktive( Model model, @RequestParam(value = "isActive", required = false) String isActive){
         List<Todo> doneTodos = new ArrayList<>();
+        Iterable<Todo> allTodos = todoRepository.findAll();
+        List<Todo> sortedTodos = Streamable.of(allTodos).stream()
+                                                        .sorted(Comparator.comparingLong(todo -> todo.getId()))
+                                                        .collect(Collectors.toList());
+
         for (Todo todo : todoRepository.findAll()){
             if(!todo.isDone()) {
                 doneTodos.add(todo);
             }
         }
         if (isActive == null) {
-            model.addAttribute("todoList", todoRepository.findAll());
+            model.addAttribute("todoList", sortedTodos);
         } else if (isActive.equals("true")) {
             model.addAttribute("todoList", doneTodos);
         }
         return "index";
     }
-
 }

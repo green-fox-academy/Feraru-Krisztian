@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
     <title>Add new todo</title>
+    <link href="/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css" rel="stylesheet"/>
+    <meta charset="utf-8" />
 </head>
-<body>
-    <h1 align="center">Add new todo</h1>
-    <form align="center" method="post" action="/todo">
-        <input type="text" name="todo" placeholder="Enter new todo"><br><br>
-        <button type="submit" value="Submit">Submit</button>
+<body class="jumbotron text-center">
+    <h1>Add new todo</h1>
+    <form class="form-group centered" method="post" action="/todo">
+        <input type="text" name="todo" class="form-group centered" placeholder="Enter new todo"><br><br>
+        <button type="submit" value="Submit" class="btn btn-success">Submit</button>
+        <button type="submit" value="Submit" class="btn btn-success"><a th:href="'/todo'">Back</a></button>
     </form>
+    <script src="webjars/jquery/1.11.1/jquery.min.js"></script>
+    <script src="webjars/bootstrap/3.3.7-1/js/bootstrap.min.js"></script>
 </body>
 </html>
