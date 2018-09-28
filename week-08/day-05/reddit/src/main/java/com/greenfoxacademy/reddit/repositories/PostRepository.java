@@ -1,4 +1,4 @@
-package com.greenfoxacademy.reddit;
+package com.greenfoxacademy.reddit.repositories;
 
 import com.greenfoxacademy.reddit.models.Post;
 import org.springframework.data.repository.CrudRepository;

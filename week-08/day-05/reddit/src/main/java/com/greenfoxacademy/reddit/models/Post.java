@@ -15,9 +15,17 @@ public class Post {
     private String url;
     private int rateing;
 
+    public Post(){}
+
     public Post(String name, String url) {
         this.name = name;
         this.url = url;
+    }
+
+    public Post(String name, String url, int rating) {
+        this.name = name;
+        this.url = url;
+        this.rateing = rating;
     }
 
     public long getId() {
