@@ -21,7 +21,7 @@ public class GreeterController {
     }
 
 
-    public static class Greet {
+    private static class Greet {
         public String name;
         public String title;
         public String welcome_message;

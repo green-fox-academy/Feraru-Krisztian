@@ -9,7 +9,9 @@ public class DoublingController {
     @ResponseBody
     public Result getDoubling(@RequestParam(required = false) Integer input) {
         Result doubling = new Result(input);
-        if (input == null){
+        if(input != null) {
+            doubling.result = input * 2;
+        } else if (input == null){
             doubling.error = "Please provide an input!";
         }
         return doubling;
@@ -22,9 +24,7 @@ public class DoublingController {
 
         Result(Integer recevied) {
             this.recevied = recevied;
-            if(recevied != null) {
-                this.result = recevied * 2;
-            }
+
         }
     }
 }
