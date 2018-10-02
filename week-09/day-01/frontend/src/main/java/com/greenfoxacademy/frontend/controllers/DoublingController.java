@@ -17,13 +17,13 @@ public class DoublingController {
         return doubling;
     }
 
-    private static class Result {
-        public Integer recevied;
+    public static class Result {
+        public Integer received;
         public Integer result;
         public String error;
 
-        Result(Integer recevied) {
-            this.recevied = recevied;
+        Result(Integer received) {
+            this.received = received;
 
         }
     }
