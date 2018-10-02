@@ -28,9 +28,9 @@ public class DoublingControllerTest {
     }
 
     @Test
-    public void getDoublingNegativeNumberTest(){
+    public void getDoublingNegativeNumberTest() {
         DoublingController.Result result = controller.getDoubling(-5);
-        assertEquals(-10, (long)result.result);
+        assertEquals(-10, (long) result.result);
     }
 
     @Test

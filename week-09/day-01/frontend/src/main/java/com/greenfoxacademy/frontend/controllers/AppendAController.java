@@ -16,7 +16,7 @@ public class AppendAController {
     }
 
 
-    private static class AppendA {
+    public static class AppendA {
         public String appended;
 
         AppendA(String appended) {
